@@ -4,33 +4,37 @@
         <meta charset="utf-8">
         <title>Vodori UI Assignment</title>
         <link rel="stylesheet" href="/lib/dojo/dijit/themes/claro/claro.css">
+        <link rel="stylesheet" href="/app/style/app.css">
         <script>
             var dojoConfig = {
+                baseUrl: "/",
                 parseOnLoad: false,
                 packages: [
                     {
                             name: "dojo",
-                            location: "/lib/dojo/dojo"
+                            location: "lib/dojo/dojo"
                     },
                     {
                             name: "dijit",
-                            location: "/lib/dojo/dijit"
+                            location: "lib/dojo/dijit"
                     },
                     {
                             name: "dojox",
-                            location: "/lib/dojo/dojox"
+                            location: "lib/dojo/dojox"
                     },
                     {
                             name: "app",
-                            location: "/app"
+                            location: "app"
                     }
-                ]
+                ],
+                async: 1
             };
         </script>
-        <script data-dojo-config="async: 1" src="/lib/dojo/dojo/dojo.js"></script>
+        <script src="/lib/dojo/dojo/dojo.js"></script>
         <script src="/app/run.js"></script>
    </head>
    <body class="claro">
+    <div data-dojo-type="app/PodcastWidget"></div>
 
    </body>
 </html>
