@@ -10,3 +10,6 @@
 [submodule "lib/dojo/util"]
 	path = lib/dojo/util
 	url = git://github.com/dojo/util
+[submodule "lib/lodash"]
+	path = lib/lodash
+	url = https://github.com/lodash/lodash.git
