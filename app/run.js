@@ -1,7 +1,7 @@
 require([
     'dojo/ready', 'dojo/parser',
 
-    'app/PodcastWidget'
+    'app/WeatherWidget'
 ], function(
     ready, parser
     ){

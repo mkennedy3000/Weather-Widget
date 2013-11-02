@@ -11,20 +11,25 @@
                 parseOnLoad: false,
                 packages: [
                     {
-                            name: "dojo",
-                            location: "lib/dojo/dojo"
+                        'name': "dojo",
+                        'location': "lib/dojo/dojo"
                     },
                     {
-                            name: "dijit",
-                            location: "lib/dojo/dijit"
+                        'name': "dijit",
+                        'location': "lib/dojo/dijit"
                     },
                     {
-                            name: "dojox",
-                            location: "lib/dojo/dojox"
+                        'name': "dojox",
+                        'location': "lib/dojo/dojox"
                     },
                     {
-                            name: "app",
-                            location: "app"
+                        'name': "app",
+                        'location': "app"
+                    },
+                    {
+                        'name': 'lodash',
+                        'location': 'lib/lodash',
+                        'main': 'lodash'
                     }
                 ],
                 async: 1
@@ -34,7 +39,7 @@
         <script src="/app/run.js"></script>
    </head>
    <body class="claro">
-    <div data-dojo-type="app/PodcastWidget"></div>
+    <div data-dojo-type="app/WeatherWidget"></div>
 
    </body>
 </html>
