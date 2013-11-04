@@ -15,6 +15,7 @@ define(
         ){
 
         BASE_URL = "//api.wunderground.com/api/";
+        AUTOCOMPLETE_URL = "//autocomplete.wunderground.com/aq";
 
         return declare(null, {
 
@@ -80,7 +81,6 @@ define(
                     }
                 ).then(
                     function(value){
-
                         if(value.response.error) {
                             response.reject(value.response.error);
                         }
@@ -92,6 +92,40 @@ define(
                                 });
                             }
                             response.resolve(value);
+                        }
+                    },
+                    lang.hitch(response, "reject")
+                );
+
+                return response.promise;
+            },
+
+            /**
+             * Send a request to the auto completion API
+             *
+             * @param {Object} parameters
+             * @returns {Deferred.promise} A promise that resolves to the auto completion search results
+             * @private
+             */
+            _sendAutocompleteRequest: function(parameters) {
+                if(!_.isObject(parameters)) {
+                    throw "Must provide parameters for autocomplete request"
+                }
+
+                var response = new Deferred();
+
+                script.get(AUTOCOMPLETE_URL,
+                    {
+                        query: parameters,
+                        jsonp: "cb"
+                    }
+                ).then(
+                    function(value){
+                        if(value.error) {
+                            response.reject(value.response.error);
+                        }
+                        else {
+                            response.resolve(value.RESULTS);
                         }
                     },
                     lang.hitch(response, "reject")
@@ -119,8 +153,8 @@ define(
             /**
              * Gets the current conditions for the provided location
              * See http://www.wunderground.com/weather/api/d/docs?d=data/index for format for defining a location
-             * @param location The location to look into
-             * @returns {Deferred}
+             * @param location The location whose conditions the caller is interested in
+             * @returns {Deferred.promise} A promise that resolves to the current conditions in the location of interest
              */
             getConditions: function(location) {
                 var conditions = new Deferred();
@@ -130,8 +164,37 @@ define(
                     },
                     lang.hitch(conditions, 'reject')
                 );
-                return conditions;
+                return conditions.promise;
+            },
+
+            /**
+             * Search for cities in the Weather Underground system
+             * @param {string} queryString String to query with
+             * @returns {Deferred.promise} A promise that resolves to a list of hits from the system
+             */
+            queryCities: function(queryString) {
+                return this._sendAutocompleteRequest({
+                    query: queryString,
+                    cities: 1,
+                    h: 0
+                });
+            },
+
+            /**
+             * Search for hurricanes in the Weather Underground system
+             * @param {string} queryString String to query with
+             * @returns {Deferred.promise} A promise that resolves to a list of hits from the system
+             */
+            queryHurricanes: function(queryString) {
+                return this._sendAutocompleteRequest({
+                    query: queryString,
+                    cities: 0,
+                    h: 1
+                });
             }
+
+
+
         })
 
 });

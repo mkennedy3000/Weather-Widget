@@ -1,0 +1,15 @@
+.app-weather-widget {
+    width: 400px;
+    height: 300px;
+    border: solid 1px black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.app-weather-widget h1 {
+    padding: 5px;
+    margin: 0px;
+    color: white;
+    background-color: black;
+    font-family: "Arial", sans-serif;
+}
