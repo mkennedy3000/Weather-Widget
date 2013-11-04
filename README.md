@@ -6,7 +6,7 @@ our clients' data.
 Often, this is done via a service or API provided by our client or a third party.
 
 In this exercise, you will be creating a widget that allows users to get access to and view weather related data,
-provided by the good people at Weather Underground.
+provided by the good people at [Weather Underground](http://www.wunderground.com/).
 
 You'll be using the Dojo Toolkit. You may have not used it before; don't worry. If you're familiar with any
 other frameworks or toolkits, you'll soon figure out how to do things the Dojo way. If you're not, now's the perfect time
@@ -24,6 +24,10 @@ Take the `WeatherService` service and use it to create a `WeatherWidget` widget.
    feeling adventurous, go ahead and extend the `WeatherService` service some more. Add another method corresponding
    to an API endpoint. Then, extend the `WeatherWidget` or create a new one and show us what you can do. This isn't
    mandatory, but if you really want to flex your UI engineering muscles, we'd love to see what you can do!
+
+The skeleton code to start with is in a a Github repository. See below to see how to get set up with Git.
+Get up to data on Dojo (see below).
+Look at the code in the `app` directory. That's your starting place and where your code should go.
 
 #### Dojo
 You'll be working with version 1.9 of Dojo. Here's the first thing to know - it's *big*. Don't worry. You don't need
@@ -76,3 +80,12 @@ At this point, your development environment, including necessary libraries will 
 
 
 #### Passing you results to us
+When you're done and ready to pass your work to us, you'll need to do the following in the `vodori-fe-assignment` directory
+
+    git add -A
+    git commit -m "Vodori Application by <your name>"
+    git archive --format=tar HEAD | gzip > <your.name>.tgz
+
+Then send the `tgz` file to us. We'll expand it, run the `git submodule` command to set up the dojo library, run a
+web server in the root directory of what you send us and check out your widgets. Make sure you've added any new widgets
+to `index.html` or create new pages to show off your new widgets!
