@@ -56,7 +56,7 @@ If you have `python` installed, you can run:
 
 or, if you're running Python 3:
 
-    python -m http.server
+    python -m http.server 8080
 
 As with `node`, run either of these in the same directory as index.html and navigate to [http://localhost:8080](http://localhost:8080)
 
