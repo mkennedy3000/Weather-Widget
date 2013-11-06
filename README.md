@@ -38,6 +38,28 @@ Drop in on the first two, at least, to get your bearings.
 
 ##### How do I...
 
+######... view my work?
+Just opening index.html in a browser won't work here. You need to be running an HTTP server. However, don't worry... you
+don't need to set up and configure a whole Apache instance. There are lightweight solutions:
+
+**Node**
+If you have `node` and `npm` installed, you can install `http-server`
+
+    npm install -g http-server
+
+Then, execute `http-server` in the same directory as index.html and navigate to [http://localhost:8080](http://localhost:8080)
+
+**Python**
+If you have `python` installed, you can run:
+
+    python -m SimpleHTTPServer 8080
+
+or, if you're running Python 3:
+
+    python -m http.server
+
+As with `node`, run either of these in the same directory as index.html and navigate to [http://localhost:8080](http://localhost:8080)
+
 ######... use Dojo modules?
 Dojo is a modular toolkit. It operates in a manner that is similar to many other programming languages. You may be familiar with `import` in Java and Python, `use` and `require` in Perl, `include` in C and its derivatives. In general, these are simply methods for pulling additional functionality in to the code that you're writing.
 
