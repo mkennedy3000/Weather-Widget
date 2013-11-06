@@ -12,7 +12,7 @@ Take the `WeatherService` service and use it to create a `WeatherWidget` widget.
 
  - Allow users to type in the name of a location
  - Display autosuggestions as users type in their location. Users should be able to select from this list.
- - Once a location has been entered into the textbox, the current weather conditions.
+ - Once a location has been entered into the textbox, show the current weather conditions.
  - Now make it look nice. You can use CSS or, if you're so inclined, you can use LESS or SASS.
  - Users should be able to repeatedly put in different locations and see the widget change.
  - You're done!
