@@ -14,7 +14,7 @@ define([
 
     ){
 
-    var API_KEY = "585087f8cf5f2004";
+    var API_KEY = "YOUR API KEY HERE";
 
     return declare('app/WeatherWidget', [_WidgetBase, _TemplatedMixin], {
 
