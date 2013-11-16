@@ -133,9 +133,18 @@ When you're done and ready to pass your work to us, you'll need to do the follow
 
     git add -A
     git commit -m "Vodori Application by <your name>"
-    git archive --format=tar HEAD | gzip > <your.name>.tgz
+    git bundle create <your.name>.bundle master
 
-Then send the `tgz` file to us. We'll expand it, run the `git submodule` command to set up the dojo library, run a web server in the root directory of what you send us and check out your widgets. Make sure you've added any new widgets to `index.html` or create new pages to show off your new widgets!
+Then send the `bundle` file to us.
+
+Once we have it, we'll run the following:
+
+    git clone -b master <your.name>.bundle <your.name>.unbundled
+    cd <your.name>.unbundled
+    git submodule init
+    git submodule update
+
+We'll then start our web server and take a look. We'll be using the node `http-server`.
 
 #### Suggested reading
 None of this is vital, but here are a few good things to look at, within the context of this exercise:
