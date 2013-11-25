@@ -166,6 +166,23 @@ define(
                 );
                 return conditions.promise;
             },
+            
+            /**
+             * Gets the forecast for the provided location
+             * See http://www.wunderground.com/weather/api/d/docs?d=data/index for format for defining a location
+             * @param location The location whose conditions the caller is interested in
+             * @returns {Deferred.promise} A promise that resolves to the forecast for the location of interest
+             */
+            getForecast: function(location) {
+                var conditions = new Deferred();
+                this._sendRequest('forecast', location).then(
+                    function(response){
+                        return conditions.resolve(response.forecast);
+                    },
+                    lang.hitch(conditions, 'reject')
+                );
+                return conditions.promise;
+            },
 
             /**
              * Search for cities in the Weather Underground system

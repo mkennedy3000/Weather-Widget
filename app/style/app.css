@@ -3,13 +3,133 @@
     height: 300px;
     border: solid 1px black;
     padding: 0px;
-    margin: 0px;
+	background-color:#B4E2FC;
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 1px solid #67b1e0;
 }
 
 .app-weather-widget h1 {
     padding: 5px;
     margin: 0px;
     color: white;
-    background-color: black;
+    opacity: 1.0;
     font-family: "Arial", sans-serif;
+    text-align: center;
+    
+    border-radius: 10px 10px 0px 0px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+	border: 0px solid #000000;
+	
+	/*Gradient*/
+	background: rgba(134,195,233,1);
+	background: -moz-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(134,195,233,1)), color-stop(42%, rgba(103,177,224,1)), color-stop(100%, rgba(55,151,210,1)));
+	background: -webkit-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86c3e9', endColorstr='#3797d2', GradientType=1 );
+}
+
+.app-weather-widget h2 {
+	color: white;
+    opacity: 1.0;
+    padding: 0px;
+    margin: 5px;
+    font-family: "Arial", sans-serif;
+}
+
+.app-weather-widget h3 {
+	color: white;
+    opacity: 0.9;
+    padding: 0px;
+    margin: 3px;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+.app-weather-widget h5 {
+	color: white;
+    opacity: 0.75;
+    padding: 0px;
+    margin: 2px;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+.app-weather-widget table {
+	border: 10px solid #67b1e0;
+	
+	/*Gradient*/
+	background: rgba(134,195,233,1);
+	background: -moz-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(134,195,233,1)), color-stop(42%, rgba(103,177,224,1)), color-stop(100%, rgba(55,151,210,1)));
+	background: -webkit-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86c3e9', endColorstr='#3797d2', GradientType=1 );
+}
+
+.weather-info {
+	width: 200px;
+	margin-left: 100px;
+	color: black;
+	text-align: center;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+.weather-forecast {
+	width: 300px;
+	margin-left: 50px;
+	padding-top: 25px;
+	cursor: pointer;
+}
+
+.autoElement {
+	width: 200px;
+	margin-left: 103px;
+	background-color:black;
+	color: white;
+	cursor: pointer;
+	height: 0px;
+	
+	/*Gradient*/
+	background: rgba(134,195,233,1);
+	background: -moz-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(134,195,233,1)), color-stop(42%, rgba(103,177,224,1)), color-stop(100%, rgba(55,151,210,1)));
+	background: -webkit-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86c3e9', endColorstr='#3797d2', GradientType=1 );
+}
+
+.autoElementHighlight {
+	width: 200px;
+	margin-left: 103px;
+	background-color:black;
+	color: yellow;
+	cursor: pointer;
+	height: 0px;
+	
+	/*Gradient*/
+	background: rgba(134,195,233,1);
+	background: -moz-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(134,195,233,1)), color-stop(42%, rgba(103,177,224,1)), color-stop(100%, rgba(55,151,210,1)));
+	background: -webkit-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -o-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	background: linear-gradient(45deg, rgba(134,195,233,1) 0%, rgba(103,177,224,1) 42%, rgba(55,151,210,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86c3e9', endColorstr='#3797d2', GradientType=1 );
+}
+
+#textBox {
+	width: 200px;
+	margin-left: 100px;
+	margin-top: 10px;
 }

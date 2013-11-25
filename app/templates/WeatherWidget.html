@@ -1,10 +1,71 @@
 <div class="app-weather-widget">
     <h1>Weather Widget</h1>
-    <div>This is the Widget that you're going to populate</div>
     <div>
-        <input type="text" name="city"
+        <input type="text" name="city" placeholder="Type a city"
+        	   id="textBox"
+        	   autocomplete="off"
                data-dojo-type="dijit/form/TextBox"
-                data-dojo-attach-point="locationInput"/>
+               data-dojo-attach-point="locationInput"/>
     </div>
-
+    <!-- Autocomplete Container Node -->
+    <div id = "auto-complete"
+    	data-dojo-attach-point="containerNode">
+    </div>
+    <!-- Current Weather Table -->
+    <div class="weather-info"
+    	data-dojo-attach-point="weatherInfo"
+    	title="Click For Forecast">
+    	<table align="center">
+    		<tr>
+    			<!-- Weather image -->
+    			<td style="background-color:white"><img src="" data-dojo-attach-point="pic"></td>
+    			<!-- Weather temperatures -->
+    			<td>
+    				<h5 data-dojo-attach-point="high"></h5>
+    				<h2 data-dojo-attach-point="temp"></h2>
+    				<h5 data-dojo-attach-point="low"></h5>
+    			</td>
+    		</tr>
+    		<!-- Weather info -->
+    		<tr>
+    			<td colspan="2"><h2 data-dojo-attach-point="weather"></h2></td>
+    		</tr>
+    	</table>
+    </div>
+    <!-- Forecast Table -->
+    <div class="weather-forecast"
+    	data-dojo-attach-point="weatherForecast"
+    	title="Click For Current Weather">
+    	<table align="center">
+    		<!-- Days of the week --> 
+    		<tr>
+    			<td><h2 id="day0"></h2></td>
+    			<td><h2 id="day1"></h2></td>
+    			<td><h2 id="day2"></h2></td>
+    			<td><h2 id="day3"></h2></td>
+    			</td>
+    		</tr>
+    		<!-- Weather images -->
+    		<tr>
+    			<td style="background-color:white; text-align: center;"><img src="" id="pic0"></td>
+    			<td style="background-color:white; text-align: center;"><img src="" id="pic1"></td>
+    			<td style="background-color:white; text-align: center;"><img src="" id="pic2"></td>
+    			<td style="background-color:white; text-align: center;"><img src="" id="pic3"></td>
+    		</tr>
+    		<!-- Highs -->
+    		<tr>
+    			<td><h3 id="high0"></h3></td>
+    			<td><h3 id="high1"></h3></td>
+    			<td><h3 id="high2"></h3></td>
+    			<td><h3 id="high3"></h3></td>
+    		</tr>
+    		<!-- Lows  -->
+    		<tr>
+    			<td><h5 id="low0"></h5></td>
+    			<td><h5 id="low1"></h5></td>
+    			<td><h5 id="low2"></h5></td>
+    			<td><h5 id="low3"></h5></td>
+    		</tr>
+    	</table>
+    </div>
 </div>
